@@ -1,52 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego Simon dice</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego Simon dice</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-    </header>
-    <script type="text/javascript" src="./js/popper.min.js"></script>
+  <header class="header">
+    <nav class="navbar navbar-expand-sm  header__nav container">
+      <a class="header__nav__title" href="#">Juego</a>
+      <button class="navbar-toggler custom-toggler header__nav__button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav header__nav__list">
+          <li class="nav-item header__nav__list__item ">
+            <a class="nav-link " href="#">Inicio <i class="fas fa-home"></i></a>
+          </li>
+          <li class="nav-item header__nav__list__item ">
+            <a class="nav-link " href="#">Puntajes <i class="fas fa-home"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container title-section">
+    <h1>Juego Simon Dice</h1>
+    <h2>¡Bienvenido! Para jugar ingrese sus datos.</h2>
+  </main>
+  <div class="container buttons-section">
+    <button class="btn btn-lg btn-primary">Ingresar Datos</button>
+    <button class="btn btn-lg btn-primary">Jugar</button>
+  </div>
+
+  <div class="container">
+    <div class="tablero">
+      <div class="tablero__cuadro rosa"></div>
+      <div class="tablero__cuadro rojo"></div>
+      <div class="tablero__cuadro verde"></div>
+      <div class="tablero__cuadro amarillo"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="informacion">
+      <div class="informacion__status">
+        <h3>Status</h3>
+        <div class="informacion__status__label">
+          <p>=></p>
+          <span class="informacion__status__label__status">asdfasdfas</span>
+        </div>
+        <div class="informacion__status__label">
+          <p>Nivel: </p>
+          <span class="informacion__status__label__nivel">adfadsfasd</span>
+        </div>
+      </div>
+      <div class="informacion__datos">
+        <h3>Información</h3>
+        <div class="informacion__datos__label">
+          <p>Jugador:</p>
+          <span class="informacion__datos__label__datos">asdfadsf</span>
+        </div>
+        <div class="informacion__datos__label">
+          <p>Correo:</p>
+          <span class="informacion__datos__label__datos">dsfasdfa</span>
+        </div>
+        <div class="informacion__datos__label">
+          <p>Fecha:</p>
+          <span class="informacion__datos__label__datos">adfsadf</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/popper.min.js"></script>
 </body>
+
 </html>

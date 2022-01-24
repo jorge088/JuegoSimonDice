@@ -1,3 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: url("../Assetts/images/fondo.jpg");
+  background-size: cover;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background-color: #0a5cb8;
+  font-size: 16px;
+  margin: 0;
+}
+.header__nav__title {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6em;
+}
+.header__nav__title:hover {
+  color: #FFF;
+}
+.header__nav__button {
+  margin-left: auto;
+}
+.header__nav__button:focus {
+  color: transparent;
+}
+.header__nav__list {
+  margin-left: auto;
+}
+.header__nav__list__item {
+  margin-right: 1em;
+}
+.header__nav__list a {
+  padding: 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #FFF;
+  transition: 0.5s ease all;
+}
+.header__nav__list a:hover {
+  color: #FFF;
+  text-shadow: 1px 0 0 #FFF;
+}
+.header__nav__list a:focus {
+  color: #FFF;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border: 2px solid #FFF;
+}
+
+.title-section {
+  text-align: center;
+  color: #fff;
+  margin: 1.2em auto;
+  font-size: 16px;
+}
+.title-section h1 {
+  font-size: 2em;
+}
+.title-section h2 {
+  font-size: 1.1em;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.buttons-section button {
+  font-size: 1em;
+}
+
+.tablero {
+  font-size: 16px;
+  margin: 2em auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 14em);
+  grid-template-rows: 14em;
+  gap: 10px;
+}
+.tablero__cuadro {
+  transition: 0.5s ease all;
+}
+.tablero__cuadro.amarillo {
+  background: yellow;
+}
+.tablero__cuadro.verde {
+  background: green;
+}
+.tablero__cuadro.rojo {
+  background: red;
+}
+.tablero__cuadro.rosa {
+  background: blueviolet;
+}
+.tablero__cuadro:hover {
+  filter: drop-shadow(1px 1px 7px #dad6d6);
+  cursor: pointer;
+}
+
+.informacion {
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  color: #FFF;
+}
+.informacion h3 {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0.2em 0;
+}
+.informacion__status {
+  background-color: #1466c3;
+}
+.informacion__status__label {
+  display: flex;
+  padding: 0.4em 0;
+}
+.informacion__status__label p {
+  margin: 0 2em;
+}
+.informacion__datos {
+  background-color: #1466c3;
+}
+.informacion__datos__label {
+  display: flex;
+  padding: 0.4em 0;
+}
+.informacion__datos__label p {
+  margin: 0 2em;
+}
+@media only screen and (max-width: 575px) {
+  .tablero {
+    font-size: 14px;
+    grid-template-columns: repeat(2, 11.5em);
+    grid-template-rows: repeat(2, 11.5em);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .tablero {
+    font-size: 15px;
+    grid-template-columns: repeat(2, 14em);
+    grid-template-rows: 14em 14em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .tablero {
+    font-size: 16px;
+    grid-template-columns: repeat(2, 15em);
+    grid-template-rows: 15em 15em;
+  }
+  .tablero__cuadro {
+    height: 14em;
+    width: 14em;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
