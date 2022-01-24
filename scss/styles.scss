@@ -109,10 +109,8 @@ body{
 }
 .informacion{
     font-size: 16px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
     color: #FFF;
+    margin: 0 1em;
     & h3{
         text-align: center;
         font-size: 1.4em;
@@ -120,32 +118,41 @@ body{
     }
     &__status{
         background-color:#1466c3;
+        padding: 1em;
         &__label{
             display: flex;
-            padding: .4em 0;
+            padding: .3em 0;
+            font-size: 1.1em;
             & p{
                 margin: 0 2em;
+                
             }
             &__status{
+                font-weight: 700;
             }
             &__nivel{
-
+                font-weight: 700;
             }
         }
     }
     &__datos{
+        padding: 1em;
         background-color: #1466c3;
         &__label{
             display: flex;
-            padding: .4em 0;
+            padding: .3em 0;
             & p{
                 margin: 0 2em;
             }
             &__datos{
-
+                font-weight: 700;
+                font-style: italic;
             }
         }
     }
+}
+.bordes{
+    border-right: 3px solid #FFF;
 }
 @media only screen and (max-width:575px){
     .tablero{
@@ -154,6 +161,10 @@ body{
         grid-template-rows: repeat(2,11.5em);
         &__cuadro{
         }
+    }
+    .bordes{
+        border-right: none;
+        border-bottom: 3px solid #FFF;
     }
 }
 @media only screen and (min-width:576px) and (max-width:767px) {
@@ -164,6 +175,10 @@ body{
         &__cuadro{
 
             }
+    }
+    .bordes{
+        border-right: none;
+        border-bottom: 3px solid #FFF;
     }
 }
 @media only screen and (min-width:768px) and (max-width:992px) {
@@ -176,5 +191,9 @@ body{
             width: 14em;
 
             }
+    }
+    .bordes{
+        border-right: none;
+        border-bottom: 3px solid #FFF;
     }
 }

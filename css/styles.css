@@ -113,10 +113,8 @@ body {
 
 .informacion {
   font-size: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
   color: #FFF;
+  margin: 0 1em;
 }
 .informacion h3 {
   text-align: center;
@@ -125,29 +123,51 @@ body {
 }
 .informacion__status {
   background-color: #1466c3;
+  padding: 1em;
 }
 .informacion__status__label {
   display: flex;
-  padding: 0.4em 0;
+  padding: 0.3em 0;
+  font-size: 1.1em;
 }
 .informacion__status__label p {
   margin: 0 2em;
 }
+.informacion__status__label__status {
+  font-weight: 700;
+}
+.informacion__status__label__nivel {
+  font-weight: 700;
+}
 .informacion__datos {
+  padding: 1em;
   background-color: #1466c3;
 }
 .informacion__datos__label {
   display: flex;
-  padding: 0.4em 0;
+  padding: 0.3em 0;
 }
 .informacion__datos__label p {
   margin: 0 2em;
 }
+.informacion__datos__label__datos {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.bordes {
+  border-right: 3px solid #FFF;
+}
+
 @media only screen and (max-width: 575px) {
   .tablero {
     font-size: 14px;
     grid-template-columns: repeat(2, 11.5em);
     grid-template-rows: repeat(2, 11.5em);
+  }
+  .bordes {
+    border-right: none;
+    border-bottom: 3px solid #FFF;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -155,6 +175,10 @@ body {
     font-size: 15px;
     grid-template-columns: repeat(2, 14em);
     grid-template-rows: 14em 14em;
+  }
+  .bordes {
+    border-right: none;
+    border-bottom: 3px solid #FFF;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -166,6 +190,11 @@ body {
   .tablero__cuadro {
     height: 14em;
     width: 14em;
+  }
+
+  .bordes {
+    border-right: none;
+    border-bottom: 3px solid #FFF;
   }
 }
 
