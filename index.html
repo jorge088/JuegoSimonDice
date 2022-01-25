@@ -36,8 +36,8 @@
     <h2>¡Bienvenido! Para jugar ingrese sus datos.</h2>
   </main>
   <div class="container buttons-section">
-    <button class="btn btn-lg btn-primary">Ingresar Datos</button>
-    <button class="btn btn-lg btn-primary">Jugar</button>
+    <button id="btn-cargarDatos" class="btn btn-lg btn-primary">Ingresar Datos</button>
+    <button id="btn-jugar" class="btn btn-lg btn-primary">Jugar</button>
   </div>
 
   <div class="container">
@@ -54,11 +54,11 @@
         <h3>Status</h3>
         <div class="informacion__status__label ">
           <p>=></p>
-          <span class="informacion__status__label__status">asdfasdfas</span>
+          <span id="lblResultado" class="informacion__status__label__status">asdfasdfas</span>
         </div>
         <div class="informacion__status__label">
           <p>Nivel: </p>
-          <span class="informacion__status__label__nivel">adfadsfasd</span>
+          <span id="lblNivel" class="informacion__status__label__nivel">adfadsfasd</span>
         </div>
       </div>
 
@@ -66,21 +66,72 @@
         <h3>Información</h3>
         <div class="informacion__datos__label">
           <p>Jugador:</p>
-          <span class="informacion__datos__label__datos">asdfadsf</span>
+          <span id="lblJugador" class="informacion__datos__label__datos">---</span>
         </div>
         <div class="informacion__datos__label">
           <p>Correo:</p>
-          <span class="informacion__datos__label__datos">dsfasdfa</span>
+          <span id="lblCorreo" class="informacion__datos__label__datos">---</span>
         </div>
         <div class="informacion__datos__label">
           <p>Fecha:</p>
-          <span class="informacion__datos__label__datos">adfsadf</span>
+          <span id="lblFecha" class="informacion__datos__label__datos">---</span>
         </div>
       </div>
 
     </div>
   </div>
+
+  <!-- Modal de Ingreso -->
+  <div class="modal fade" id="modalIngreso" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ingrese sus datos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form  role="form">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputUsuario" class="col-form-label">Usuario:</label>
+              </div>
+              <div class="col-auto">
+                <input type="text" placeholder="Nickname" id="inputUsuario" class="form-control" >
+              </div>
+              <div  class="col-auto">
+                <span id="inputUsuario-validation" class="form-text usuario-validation">
+                  Debe ingresar un nombre de usuario.
+                </span>
+              </div>
+            </div>
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputCorreo" class="col-form-label">Correo:</label>
+              </div>
+              <div class="col-auto">
+                <input type="email" placeholder="Correo" id="inputCorreo" class="form-control" >
+              </div>
+              <div  class="col-auto">
+                <span id="inputCorreo-validation" class="form-text usuario-validation">
+                  Debe ingresar un correo Valido.
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="btn-login">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fin Modal de Ingreso -->
+  
   <script type="text/javascript" src="./js/popper.min.js"></script>
+  <script type="text/javascript" src="./js/code.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/modelo.js"></script>
 </body>
 
 </html>
