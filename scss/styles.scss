@@ -89,20 +89,32 @@ body{
     gap: 10px;
     &__cuadro{ 
         transition: .5s ease all;
-        &.amarillo{
-            background: yellow
+        &.azul{
+            background: blue;
+            &.resaltado{
+                background-color:rgb(85, 173, 255);
+            }
         }
         &.verde{
             background: green;
+            &.resaltado{
+                background-color: rgb(39, 236, 39);
+            }
         }
         &.rojo{
             background: red;
+            &.resaltado{
+                background-color: rgb(255, 82, 82);
+            }
         }
-        &.rosa{
+        &.violeta{
             background: blueviolet;
+            &.resaltado{
+                background-color: rgb(194, 129, 255);
+            }
         }
         &:hover{
-            filter: drop-shadow(1px 1px 7px #dad6d6);
+            filter: drop-shadow(1px 1px 2px #dad6d6);
             cursor:pointer;
         }
     }
@@ -158,13 +170,12 @@ body{
     color: red;
 }
 
+
 @media only screen and (max-width:575px){
     .tablero{
         font-size: 14px;
         grid-template-columns: repeat(2,11.5em);
         grid-template-rows: repeat(2,11.5em);
-        &__cuadro{
-        }
     }
     .bordes{
         border-right: none;
@@ -176,9 +187,6 @@ body{
         font-size: 15px;
         grid-template-columns: repeat(2,14em);
         grid-template-rows: 14em 14em;
-        &__cuadro{
-
-            }
     }
     .bordes{
         border-right: none;

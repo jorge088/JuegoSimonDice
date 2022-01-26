@@ -94,20 +94,32 @@ body {
 .tablero__cuadro {
   transition: 0.5s ease all;
 }
-.tablero__cuadro.amarillo {
-  background: yellow;
+.tablero__cuadro.azul {
+  background: blue;
+}
+.tablero__cuadro.azul.resaltado {
+  background-color: #55adff;
 }
 .tablero__cuadro.verde {
   background: green;
 }
+.tablero__cuadro.verde.resaltado {
+  background-color: #27ec27;
+}
 .tablero__cuadro.rojo {
   background: red;
 }
-.tablero__cuadro.rosa {
+.tablero__cuadro.rojo.resaltado {
+  background-color: #ff5252;
+}
+.tablero__cuadro.violeta {
   background: blueviolet;
 }
+.tablero__cuadro.violeta.resaltado {
+  background-color: #c281ff;
+}
 .tablero__cuadro:hover {
-  filter: drop-shadow(1px 1px 7px #dad6d6);
+  filter: drop-shadow(1px 1px 2px #dad6d6);
   cursor: pointer;
 }
 
@@ -169,6 +181,7 @@ body {
     grid-template-columns: repeat(2, 11.5em);
     grid-template-rows: repeat(2, 11.5em);
   }
+
   .bordes {
     border-right: none;
     border-bottom: 3px solid #FFF;
@@ -180,6 +193,7 @@ body {
     grid-template-columns: repeat(2, 14em);
     grid-template-rows: 14em 14em;
   }
+
   .bordes {
     border-right: none;
     border-bottom: 3px solid #FFF;
