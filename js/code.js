@@ -1,19 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    //código a ejecutar cuando el DOM está listo para recibir acciones    
-    juego =new Juego();
-    var app = new Aplicacion(juego);
-    document.getElementById('btn-jugar').disabled=true;
-
-    document.getElementById('btn-cargarDatos').addEventListener('click',function(){
-        app.evtoCargarDatos();
-    });
-    document.getElementById('btn-jugar').addEventListener('click',function(){
-        app.iniciar();
-    });
-});
-
 class Aplicacion {
-    
     constructor(juego){
         this.juego=juego;
         document.getElementById("lblResultado").textContent="";
@@ -52,7 +37,7 @@ class Aplicacion {
                 clearInterval(proceso);
                 document.getElementById('lblResultado').textContent='Su turno';
             }
-        },700);
+        },600);
     }
 
     agregarEvtosClick(){
@@ -68,15 +53,16 @@ class Aplicacion {
         document.getElementById('cuadro3').removeEventListener('click',this.elegirCuadro);
     }
     elegirCuadro(event){
+        //capturo desde el evento el id del cuadro clickeado
         let cuadroElegido = Number(event.target.id[event.target.id.length-1]);
-        console.log(cuadroElegido);
+        //Resalto el cuadro seleccionado
         document.getElementById(`cuadro${cuadroElegido}`).classList.add('resaltado');
             setTimeout(function(){
                 document.getElementById(`cuadro${cuadroElegido}`).classList.remove('resaltado');
-            },500);
+            },400);
         juego.cuadroElegido = cuadroElegido; //Envio caja seleccionada a clase Juego
-
     }
+
     evtoCargarDatos() {
         //Muestro el modal de ingreso
         var myModal = new bootstrap.Modal(document.getElementById("modalIngreso"), {});
@@ -115,3 +101,13 @@ class Aplicacion {
         });
     }
 }
+var juego =new Juego();
+var app = new Aplicacion(juego);
+document.getElementById('btn-jugar').disabled=true;
+document.getElementById('btn-cargarDatos').addEventListener('click',function(){
+    app.evtoCargarDatos();
+});
+document.getElementById('btn-jugar').addEventListener('click',function(){
+    app.iniciar();
+});
+
