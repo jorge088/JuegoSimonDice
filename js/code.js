@@ -23,7 +23,7 @@ class Aplicacion {
     iniciar(){
         this.evtoGenerarCuadroAleatorio();
         document.getElementById('lblNivel').textContent=this.juego.nivel;
-        this.evtoElegirCuadro();
+        // this.evtoElegirCuadro();
     }
 
     evtoGenerarCuadroAleatorio(){
@@ -31,6 +31,7 @@ class Aplicacion {
         this.juego.secuenciaJugador = [];
         this.juego.generarCuadroAleatorio;
         Aplicacion.mostrarSecuencia();
+        this.agregarEvtosClick();
     }
 
     static mostrarSecuencia(){
@@ -54,42 +55,28 @@ class Aplicacion {
         },700);
     }
 
-    evtoElegirCuadro(){
-        let cuadroVioleta = document.getElementById('cuadro0');
-        let cuadroRojo = document.getElementById('cuadro1');
-        let cuadroVerde = document.getElementById('cuadro2');
-        let cuadroAzul = document.getElementById('cuadro3');
-        //Animacion al clickear caja
-        cuadroVioleta.addEventListener('click',function(){
-            juego.cuadroElegido = 0; //Envio caja seleccionada a clase Juego
-            cuadroVioleta.classList.add('resaltado');
-            setTimeout(function(){
-                cuadroVioleta.classList.remove('resaltado');
-            },500); 
-        });
-        cuadroRojo.addEventListener('click',function(){
-            juego.cuadroElegido = 1; //Envio caja seleccionada a clase Juego
-            cuadroRojo.classList.add('resaltado');
-            setTimeout(function(){
-                cuadroRojo.classList.remove('resaltado');
-            },500);
-        });
-        cuadroVerde.addEventListener('click',function(){
-            juego.cuadroElegido = 2; //Envio caja seleccionada a clase Juego
-            cuadroVerde.classList.add('resaltado');
-            setTimeout(function(){
-                cuadroVerde.classList.remove('resaltado');
-            },500);
-        });
-        cuadroAzul.addEventListener('click',function(){
-            juego.cuadroElegido = 3; //Envio caja seleccionada a clase Juego
-            cuadroAzul.classList.add('resaltado');
-            setTimeout(function(){
-                cuadroAzul.classList.remove('resaltado');
-            },500);
-        });
+    agregarEvtosClick(){
+        document.getElementById('cuadro0').addEventListener('click',this.elegirCuadro);
+        document.getElementById('cuadro1').addEventListener('click',this.elegirCuadro);
+        document.getElementById('cuadro2').addEventListener('click',this.elegirCuadro);
+        document.getElementById('cuadro3').addEventListener('click',this.elegirCuadro);
     }
+    eliminarEvtosClick(){
+        document.getElementById('cuadro0').removeEventListener('click',this.elegirCuadro);
+        document.getElementById('cuadro1').removeEventListener('click',this.elegirCuadro);
+        document.getElementById('cuadro2').removeEventListener('click',this.elegirCuadro);
+        document.getElementById('cuadro3').removeEventListener('click',this.elegirCuadro);
+    }
+    elegirCuadro(event){
+        let cuadroElegido = Number(event.target.id[event.target.id.length-1]);
+        console.log(cuadroElegido);
+        document.getElementById(`cuadro${cuadroElegido}`).classList.add('resaltado');
+            setTimeout(function(){
+                document.getElementById(`cuadro${cuadroElegido}`).classList.remove('resaltado');
+            },500);
+        juego.cuadroElegido = cuadroElegido; //Envio caja seleccionada a clase Juego
 
+    }
     evtoCargarDatos() {
         //Muestro el modal de ingreso
         var myModal = new bootstrap.Modal(document.getElementById("modalIngreso"), {});

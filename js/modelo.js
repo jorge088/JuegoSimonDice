@@ -46,6 +46,7 @@ class Juego{
                }
           }
      }
+     
 }
 class Jugador{
      constructor(ranking,nombre,pais,puntaje,fecha,correo){
