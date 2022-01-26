@@ -27,13 +27,16 @@ class Juego{
           }
           if(sigueJugando){
                if(this.secuenciaJugador.length == this.secuencia.length){
+                    app.eliminarEvtosClick();
                     this.nivel++;
                     this.secuenciaJugador = [];
                     this.generarCuadroAleatorio;
                     document.getElementById("lblResultado").textContent= "¡BIEN HECHO!";
                     setTimeout(function(){
+                         
                          document.getElementById('lblNivel').textContent=this.juego.nivel;
                          Aplicacion.mostrarSecuencia();
+                         
                     },1300);
                }
           }

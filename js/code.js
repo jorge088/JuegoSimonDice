@@ -6,22 +6,23 @@ class Aplicacion {
     }
 
     iniciar(){
+        this.juego.secuencia = [];
+        this.juego.secuenciaJugador = [];
         this.evtoGenerarCuadroAleatorio();
         document.getElementById('lblNivel').textContent=this.juego.nivel;
-        // this.evtoElegirCuadro();
+        //this.agregarEvtosClick();
+
     }
 
     evtoGenerarCuadroAleatorio(){
-        this.juego.secuencia = [];
-        this.juego.secuenciaJugador = [];
         this.juego.generarCuadroAleatorio;
         Aplicacion.mostrarSecuencia();
-        this.agregarEvtosClick();
     }
 
     static mostrarSecuencia(){
         let indice = 0;
         let resaltado = false;
+        app.eliminarEvtosClick();
         var proceso = setInterval(function(){
             if (indice < juego.secuencia.length){
                 document.getElementById('lblResultado').textContent='¡JUEGO EN EJECUCIÓN!';
@@ -36,6 +37,7 @@ class Aplicacion {
             }else{
                 clearInterval(proceso);
                 document.getElementById('lblResultado').textContent='Su turno';
+                app.agregarEvtosClick();
             }
         },600);
     }
