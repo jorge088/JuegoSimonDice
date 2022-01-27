@@ -8,6 +8,8 @@ class Aplicacion {
     iniciar(){
         this.juego.secuencia = [];
         this.juego.secuenciaJugador = [];
+        this.juego.nivel=1;
+        document.getElementById('btn-jugar').disabled=true;
         this.evtoGenerarCuadroAleatorio();
         document.getElementById('lblNivel').textContent=this.juego.nivel;
         //this.agregarEvtosClick();

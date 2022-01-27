@@ -13,7 +13,7 @@
 <body>
   <header class="header">
     <nav class="navbar navbar-expand-sm  header__nav container">
-      <a class="header__nav__title" href="#">Juego</a>
+      <a class="header__nav__title" href="#">Simon Dice</a>
       <button class="navbar-toggler custom-toggler header__nav__button" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -25,14 +25,13 @@
             <a class="nav-link " href="#">Inicio <i class="fas fa-home"></i></a>
           </li>
           <li class="nav-item header__nav__list__item ">
-            <a class="nav-link " href="#">Puntajes <i class="fas fa-home"></i></a>
+            <a class="nav-link " href="./pages/puntaje.html">Puntajes <i class="fas fa-home"></i></a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
   <main class="container title-section">
-    <h1>Juego Simon Dice</h1>
     <h2>¡Bienvenido! Para jugar ingrese sus datos.</h2>
   </main>
   <div class="container buttons-section">
@@ -125,13 +124,31 @@
       </div>
     </div>
   </div>
-
   <!-- Fin Modal de Ingreso -->
   
+  <!-- Inicio Modal GameOver -->
+  <div class="modal fade" id="modalGameOver" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Game Over</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4>Lo siento, perdiste! D:</h4>
+          <p>Puedes volver a iniciar el juego.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="btn-continuar">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIn Modal GameOver -->
+
   <script type="text/javascript" src="./js/popper.min.js"></script>
   <script type="text/javascript" src="./js/modelo.js"></script>
   <script type="text/javascript" src="./js/code.js"></script>
-  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
   
 </body>
 

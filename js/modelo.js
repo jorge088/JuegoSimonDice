@@ -18,6 +18,13 @@ class Juego{
           for(let i =0 ;i < this.secuenciaJugador.length;i++){
                if(this.secuencia[i] != this.secuenciaJugador[i]){
                     document.getElementById('lblResultado').textContent = "FIN DEL JUEGO";
+                    app.eliminarEvtosClick();
+                    document.getElementById('btn-jugar').disabled=false;
+                    let myModal = new bootstrap.Modal(document.getElementById("modalGameOver"), {});
+                    myModal.show();
+                    document.getElementById("btn-continuar").addEventListener('click',function(){
+                         myModal.hide();
+                    });
                     break;
                }else{
                     if(i==this.secuenciaJugador.length-1 ){
