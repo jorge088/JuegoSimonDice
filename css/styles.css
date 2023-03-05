@@ -83,44 +83,44 @@ body {
 }
 
 .tablero {
-  font-size: 16px;
+  background-color: gray;
   margin: 2em auto;
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(4, 14em);
-  grid-template-rows: 14em;
-  gap: 10px;
+  width: 450px;
+  height: 450px;
+  grid-template-columns: repeat(2, 50%);
+  border-radius: 50%;
+  overflow: hidden;
 }
 .tablero__cuadro {
-  transition: 0.5s ease all;
+  cursor: pointer;
 }
 .tablero__cuadro.azul {
-  background: blue;
+  background: #1397c4;
 }
 .tablero__cuadro.azul.resaltado {
-  background-color: #55adff;
+  background-color: #59cdf3;
 }
 .tablero__cuadro.verde {
-  background: green;
+  background: #05743e;
 }
 .tablero__cuadro.verde.resaltado {
-  background-color: #27ec27;
+  background-color: #0aaa5d;
 }
 .tablero__cuadro.rojo {
-  background: red;
+  background: #c20e17;
 }
 .tablero__cuadro.rojo.resaltado {
-  background-color: #ff5252;
+  background-color: #f32530;
 }
 .tablero__cuadro.violeta {
-  background: blueviolet;
+  background: #724292;
 }
 .tablero__cuadro.violeta.resaltado {
-  background-color: #c281ff;
+  background-color: #a65dd6;
 }
 .tablero__cuadro:hover {
-  filter: drop-shadow(1px 1px 2px #dad6d6);
-  cursor: pointer;
+  opacity: 0.7;
 }
 
 .informacion {
@@ -177,9 +177,8 @@ body {
 
 @media only screen and (max-width: 575px) {
   .tablero {
-    font-size: 14px;
-    grid-template-columns: repeat(2, 11.5em);
-    grid-template-rows: repeat(2, 11.5em);
+    width: 350px;
+    height: 350px;
   }
 
   .bordes {
@@ -189,9 +188,8 @@ body {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .tablero {
-    font-size: 15px;
-    grid-template-columns: repeat(2, 14em);
-    grid-template-rows: 14em 14em;
+    width: 400px;
+    height: 400px;
   }
 
   .bordes {
@@ -200,16 +198,6 @@ body {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  .tablero {
-    font-size: 16px;
-    grid-template-columns: repeat(2, 15em);
-    grid-template-rows: 15em 15em;
-  }
-  .tablero__cuadro {
-    height: 14em;
-    width: 14em;
-  }
-
   .bordes {
     border-right: none;
     border-bottom: 3px solid #FFF;
