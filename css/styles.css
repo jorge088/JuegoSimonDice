@@ -7,70 +7,16 @@
 body {
   background: url("../Assetts/images/fondo.jpg");
   background-size: cover;
+  font-size: 1rem;
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  background-color: #0a5cb8;
-  font-size: 16px;
-  margin: 0;
+  padding: 1em 0;
 }
-.header__nav__title {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.6em;
-}
-.header__nav__title:hover {
-  color: #FFF;
-}
-.header__nav__button {
-  margin-left: auto;
-}
-.header__nav__button:focus {
-  color: transparent;
-}
-.header__nav__list {
-  margin-left: auto;
-}
-.header__nav__list__item {
-  margin-right: 1em;
-}
-.header__nav__list a {
-  padding: 0.5em;
-  font-size: 1.1em;
-  font-weight: 700;
-  color: #FFF;
-  transition: 0.5s ease all;
-}
-.header__nav__list a:hover {
-  color: #FFF;
-  text-shadow: 1px 0 0 #FFF;
-}
-.header__nav__list a:focus {
-  color: #FFF;
-}
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-  border: 2px solid #FFF;
-}
-
-.title-section {
+.header h1 {
+  color: white;
   text-align: center;
-  color: #fff;
-  margin: 1.2em auto;
-  font-size: 16px;
-}
-.title-section h1 {
-  font-size: 2em;
-}
-.title-section h2 {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 .buttons-section {
@@ -100,24 +46,28 @@ body {
 }
 .tablero__cuadro.azul.resaltado {
   background-color: #59cdf3;
+  opacity: 1;
 }
 .tablero__cuadro.verde {
   background: #05743e;
 }
 .tablero__cuadro.verde.resaltado {
   background-color: #0aaa5d;
+  opacity: 1;
 }
 .tablero__cuadro.rojo {
   background: #c20e17;
 }
 .tablero__cuadro.rojo.resaltado {
   background-color: #f32530;
+  opacity: 1;
 }
 .tablero__cuadro.violeta {
   background: #724292;
 }
 .tablero__cuadro.violeta.resaltado {
   background-color: #a65dd6;
+  opacity: 1;
 }
 .tablero__cuadro:hover {
   opacity: 0.7;

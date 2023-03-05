@@ -7,85 +7,20 @@
 body {
     background: url('../Assetts/images/fondo.jpg');
     background-size: cover;
+    font-size: 1rem;
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    background-color: #0a5cb8;
-    font-size: 16px;
-    margin: 0;
+    padding: 1em 0;
 
-    &__nav {
-        &__title {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.6em;
-
-            &:hover {
-                color: #FFF;
-            }
-        }
-
-        &__button {
-            margin-left: auto;
-
-            &:focus {
-                color: transparent;
-            }
-        }
-
-        &__list {
-            margin-left: auto;
-
-            &__item {
-                margin-right: 1em;
-            }
-
-            & a {
-                padding: .5em;
-                font-size: 1.1em;
-                font-weight: 700;
-                color: #FFF;
-                transition: 0.5s ease all;
-
-                &:hover {
-                    color: #FFF;
-                    text-shadow: 1px 0 0 #FFF;
-                }
-
-                &:focus {
-                    color: #FFF;
-                }
-            }
-        }
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
     }
 
 }
 
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-    border: 2px solid #FFF;
-}
-
-.title-section {
-    text-align: center;
-    color: #fff;
-    margin: 1.2em auto;
-    font-size: 16px;
-
-    & h1 {
-        font-size: 2em;
-    }
-
-    & h2 {
-        font-size: 1.1em;
-    }
-}
 
 .buttons-section {
     display: flex;
@@ -115,6 +50,7 @@ body {
 
             &.resaltado {
                 background-color: #59cdf3;
+                opacity: 1;
             }
         }
 
@@ -123,6 +59,8 @@ body {
 
             &.resaltado {
                 background-color: #0aaa5d;
+                opacity: 1;
+
             }
         }
 
@@ -131,6 +69,8 @@ body {
 
             &.resaltado {
                 background-color: #f32530;
+                opacity: 1;
+
             }
         }
 
@@ -139,6 +79,8 @@ body {
 
             &.resaltado {
                 background-color: #a65dd6;
+                opacity: 1;
+
             }
         }
 

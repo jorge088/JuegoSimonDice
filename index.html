@@ -12,33 +12,12 @@
 
 <body>
   <header class="header">
-    <nav class="navbar navbar-expand-sm  header__nav container">
-      <a class="header__nav__title" href="#">Simon Dice</a>
-      <button class="navbar-toggler custom-toggler header__nav__button" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav header__nav__list">
-          <li class="nav-item header__nav__list__item ">
-            <a class="nav-link " href="#">Inicio <i class="fas fa-home"></i></a>
-          </li>
-          <li class="nav-item header__nav__list__item ">
-            <a class="nav-link " href="./pages/puntaje.html">Puntajes <i class="fas fa-home"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <h1>¡Bienvenido! Para jugar ingrese sus datos.</h1>
   </header>
-  <main class="container title-section">
-    <h2>¡Bienvenido! Para jugar ingrese sus datos.</h2>
-  </main>
   <div class="container buttons-section">
     <button id="btn-cargarDatos" class="btn btn-lg btn-primary">Ingresar Datos</button>
     <button id="btn-jugar" class="btn btn-lg btn-primary">Jugar</button>
   </div>
-
   <div class="container">
     <div class="tablero">
       <div id="cuadro0" class="tablero__cuadro violeta"></div>
@@ -89,15 +68,15 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form  role="form">
+          <form role="form">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
                 <label for="inputUsuario" class="col-form-label">Usuario:</label>
               </div>
               <div class="col-auto">
-                <input type="text" placeholder="Nickname" id="inputUsuario" class="form-control" >
+                <input type="text" placeholder="Nickname" id="inputUsuario" class="form-control">
               </div>
-              <div  class="col-auto">
+              <div class="col-auto">
                 <span id="inputUsuario-validation" class="form-text usuario-validation">
                   Debe ingresar un nombre de usuario.
                 </span>
@@ -108,9 +87,9 @@
                 <label for="inputCorreo" class="col-form-label">Correo:</label>
               </div>
               <div class="col-auto">
-                <input type="email" placeholder="Correo" id="inputCorreo" class="form-control" >
+                <input type="email" placeholder="Correo" id="inputCorreo" class="form-control">
               </div>
-              <div  class="col-auto">
+              <div class="col-auto">
                 <span id="inputCorreo-validation" class="form-text usuario-validation">
                   Debe ingresar un correo Valido.
                 </span>
@@ -125,7 +104,7 @@
     </div>
   </div>
   <!-- Fin Modal de Ingreso -->
-  
+
   <!-- Inicio Modal GameOver -->
   <div class="modal fade" id="modalGameOver" tabindex="-1">
     <div class="modal-dialog">
@@ -149,7 +128,7 @@
   <script type="text/javascript" src="./js/popper.min.js"></script>
   <script type="text/javascript" src="./js/modelo.js"></script>
   <script type="text/javascript" src="./js/code.js"></script>
-  
+
 </body>
 
 </html>
