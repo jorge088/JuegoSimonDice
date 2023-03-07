@@ -17,10 +17,10 @@ class Aplicacion {
 
     evtoGenerarCuadroAleatorio(){
         this.juego.generarCuadroAleatorio;
-        Aplicacion.mostrarSecuencia();
+        this.mostrarSecuencia();
     }
 
-    static mostrarSecuencia(){
+    mostrarSecuencia(){
         let indice = 0;
         let resaltado = false;
         app.eliminarEvtosClick(); //quito eventos de click, de niveles anteriores

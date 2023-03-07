@@ -15,11 +15,11 @@
       <h1>¡Bienvenido! Para jugar ingrese sus datos.</h1>
   </header>
   <div class="container buttons-section">
-    <button id="btn-cargarDatos" class="btn btn-lg btn-primary">Ingresar Datos</button>
+    <!-- <button id="btn-cargarDatos" class="btn btn-lg btn-primary">Ingresar Datos</button> -->
     <button id="btn-jugar" class="btn btn-lg btn-primary">Jugar</button>
   </div>
   <div class="container">
-    <div class="tablero">
+    <div class="tablero" id="tablero">
       <div id="cuadro0" class="tablero__cuadro violeta"></div>
       <div id="cuadro1" class="tablero__cuadro rojo"></div>
       <div id="cuadro2" class="tablero__cuadro verde"></div>
@@ -32,11 +32,11 @@
         <h3>Status</h3>
         <div class="informacion__status__label ">
           <p>=></p>
-          <span id="lblResultado" class="informacion__status__label__status"></span>
+          <span id="status" class="informacion__status__label__status"></span>
         </div>
         <div class="informacion__status__label">
           <p>Nivel: </p>
-          <span id="lblNivel" class="informacion__status__label__nivel"></span>
+          <span id="nivel" class="informacion__status__label__nivel">---</span>
         </div>
       </div>
 
@@ -126,9 +126,10 @@
   <!-- FIn Modal GameOver -->
 
   <script type="text/javascript" src="./js/popper.min.js"></script>
-  <script type="text/javascript" src="./js/modelo.js"></script>
-  <script type="text/javascript" src="./js/code.js"></script>
-
+  <script src="./js/modelo/modelo.js"></script>
+  <script src="./js/vista/vista.js"></script>
+  <script src="./js/controlador/controlador.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
