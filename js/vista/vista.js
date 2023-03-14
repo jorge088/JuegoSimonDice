@@ -5,7 +5,7 @@ class VistaJuego {
 
     iniciar() {
         document.querySelector('#nivel').textContent = '-';
-        document.querySelector('#status').textContent = '-'
+        document.querySelector('#status').textContent = ''
         this.generarBtnJugar();
     }
 

@@ -11,26 +11,12 @@
 </head>
 
 <body>
-  <!-- <header class="header">
-      <h1>¡Bienvenido! Para jugar ingrese sus datos.</h1>
-  </header> -->
-
-
-  <div class="container">
-    <div class="tablero" id="tablero">
-      <!-- <button id="btn-jugar" class="btnJugar">Jugar</button> -->
-      <div id="cuadro0" class="tablero__cuadro violeta"></div>
-      <div id="cuadro1" class="tablero__cuadro rojo"></div>
-      <div id="cuadro2" class="tablero__cuadro verde"></div>
-      <div id="cuadro3" class="tablero__cuadro azul"></div>
-    </div>
-  </div>
   <div class="container">
     <div class="informacion row ">
-      <div class="informacion__status col-lg-6 col-md-12 col-sm-12 bordes">
-        <h3>Status</h3>
+      <div
+        class="informacion__status col-12 d-flex flex-column flex-md-row align-items-center justify-content-around justify-content-md-between">
         <div class="informacion__status__label ">
-          <p>=></p>
+          <p> Status: </p>
           <span id="status" class="informacion__status__label__status"></span>
         </div>
         <div class="informacion__status__label">
@@ -38,25 +24,18 @@
           <span id="nivel" class="informacion__status__label__nivel">---</span>
         </div>
       </div>
-
-      <div class="informacion__datos col-lg-6 col-md-12 col-sm-12">
-        <h3>Información</h3>
-        <div class="informacion__datos__label">
-          <p>Jugador:</p>
-          <span id="lblJugador" class="informacion__datos__label__datos">---</span>
-        </div>
-        <div class="informacion__datos__label">
-          <p>Correo:</p>
-          <span id="lblCorreo" class="informacion__datos__label__datos">---</span>
-        </div>
-        <div class="informacion__datos__label">
-          <p>Fecha:</p>
-          <span id="lblFecha" class="informacion__datos__label__datos">---</span>
-        </div>
-      </div>
-
     </div>
   </div>
+
+  <div class="container">
+    <div class="tablero" id="tablero">
+      <div id="cuadro0" class="tablero__cuadro violeta"></div>
+      <div id="cuadro1" class="tablero__cuadro rojo"></div>
+      <div id="cuadro2" class="tablero__cuadro verde"></div>
+      <div id="cuadro3" class="tablero__cuadro azul"></div>
+    </div>
+  </div>
+
 
   <!-- Modal de Ingreso -->
   <div class="modal fade" id="modalIngreso" tabindex="-1">

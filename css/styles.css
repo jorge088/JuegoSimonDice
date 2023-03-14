@@ -8,15 +8,12 @@ body {
   background: url("../Assetts/images/fondo.jpg");
   background-size: cover;
   font-size: 1rem;
-}
-
-.header {
-  padding: 1em 0;
-}
-.header h1 {
-  color: white;
-  text-align: center;
-  font-size: 1.5em;
+  min-height: 100vh;
+  padding: 1.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6em;
 }
 
 .btnJugar {
@@ -84,51 +81,14 @@ body {
 }
 
 .informacion {
-  font-size: 16px;
-  color: #FFF;
-  margin: 0 1em;
-}
-.informacion h3 {
-  text-align: center;
-  font-size: 1.4em;
-  margin: 0.2em 0;
-}
-.informacion__status {
-  background-color: #1466c3;
-  padding: 1em;
+  font-size: 1rem;
+  color: #fff;
 }
 .informacion__status__label {
   display: flex;
-  padding: 0.3em 0;
-  font-size: 1.1em;
-}
-.informacion__status__label p {
-  margin: 0 2em;
-}
-.informacion__status__label__status {
-  font-weight: 700;
-}
-.informacion__status__label__nivel {
-  font-weight: 700;
-}
-.informacion__datos {
-  padding: 1em;
-  background-color: #1466c3;
-}
-.informacion__datos__label {
-  display: flex;
-  padding: 0.3em 0;
-}
-.informacion__datos__label p {
-  margin: 0 2em;
-}
-.informacion__datos__label__datos {
-  font-weight: 700;
-  font-style: italic;
-}
-
-.bordes {
-  border-right: 3px solid #FFF;
+  font-size: 1.45em;
+  gap: 8px;
+  font-weight: 500;
 }
 
 .usuario-validation {
@@ -141,9 +101,8 @@ body {
     height: 350px;
   }
 
-  .bordes {
-    border-right: none;
-    border-bottom: 3px solid #FFF;
+  .informacion {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -152,15 +111,8 @@ body {
     height: 400px;
   }
 
-  .bordes {
-    border-right: none;
-    border-bottom: 3px solid #FFF;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  .bordes {
-    border-right: none;
-    border-bottom: 3px solid #FFF;
+  .informacion {
+    font-size: 0.9rem;
   }
 }
 
