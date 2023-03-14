@@ -19,27 +19,40 @@ body {
   font-size: 1.5em;
 }
 
-.buttons-section {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
+.btnJugar {
+  background: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #e6e6e6;
+  outline: 1px solid #000;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  z-index: 20;
+  font-size: 1.5em;
 }
-.buttons-section button {
-  font-size: 1em;
+
+.btnJugar:hover {
+  background-color: #eeeeee;
+}
+
+.btnJugar.oculto {
+  display: none;
 }
 
 .tablero {
   background-color: gray;
   margin: 2em auto;
   display: grid;
-  width: 450px;
-  height: 450px;
+  width: 440px;
+  height: 440px;
   grid-template-columns: repeat(2, 50%);
   border-radius: 50%;
   overflow: hidden;
-}
-.tablero__cuadro {
-  cursor: pointer;
+  position: relative;
 }
 .tablero__cuadro.azul {
   background: #1397c4;
@@ -68,9 +81,6 @@ body {
 .tablero__cuadro.violeta.resaltado {
   background-color: #a65dd6;
   opacity: 1;
-}
-.tablero__cuadro:hover {
-  opacity: 0.7;
 }
 
 .informacion {

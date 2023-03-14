@@ -6,7 +6,28 @@ class VistaJuego {
     iniciar() {
         document.querySelector('#nivel').textContent = '-';
         document.querySelector('#status').textContent = '-'
-        
+        this.generarBtnJugar();
+    }
+
+    //Genera btn para controlar el juego en el DOM
+    generarBtnJugar(){
+        const tablero = document.querySelector('#tablero');
+        tablero.innerHTML += `
+            <button id="btn-jugar" class="btnJugar">Jugar</button>
+        `
+    }
+
+    //Oculta btnJugar durante ejecución
+    ocultarBtnJugar(){
+        const btnJugar = document.querySelector('#btn-jugar');
+        btnJugar.classList.add('oculto');
+    }
+
+    //Mostrar btnJugar cuando finaliza el juego
+    mostrarBtnJugar(texto){
+        const btnJugar = document.querySelector('#btn-jugar');
+        btnJugar.classList.remove('oculto');
+        btnJugar.textContent = texto
     }
 
     actualizarNivelInfo(nivel) {
