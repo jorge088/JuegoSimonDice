@@ -1,6 +1,3 @@
 
 const juego = new ControladorJuego();
-juego.iniciar();    
-
-
-
+juego.iniciar();

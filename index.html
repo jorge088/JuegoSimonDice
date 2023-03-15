@@ -37,71 +37,71 @@
   </div>
 
 
-  <!-- Modal de Ingreso -->
-  <div class="modal fade" id="modalIngreso" tabindex="-1">
-    <div class="modal-dialog">
+  <!-- Modal GameOver -->
+  <div class="modal fade" id="modalGameOver" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Ingrese sus datos</h5>
+          <h5 class="modal-title">Fin del juego</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form role="form">
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="inputUsuario" class="col-form-label">Usuario:</label>
-              </div>
-              <div class="col-auto">
-                <input type="text" placeholder="Nickname" id="inputUsuario" class="form-control">
-              </div>
-              <div class="col-auto">
-                <span id="inputUsuario-validation" class="form-text usuario-validation">
+          <p class="h6">Te equivocaste en la secuencia de colores :c</p>
+          <p class="h6">Puedes registrar tu puntaje ó reiniciar el juego.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-target="#modalRegistroPuntaje" data-bs-toggle="modal"
+            id="btnIngresarDatos">Ingresar datos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Ingreso -->
+  <div class="modal fade" id="modalRegistroPuntaje" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registrar puntaje</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form role="form" id="form" novalidate>
+            <div class="row g-3 mb-3">
+              <label for="inputUsuario" class="col-sm-2 col-form-label">Nickname:</label>
+              <div class="col-sm-10">
+                <input type="text" placeholder="Nickname" id="inputUsuario" class="form-control"
+                  aria-describedby="validationUser" required>
+                <div id="validationUser" class="invalid-feedback">
                   Debe ingresar un nombre de usuario.
-                </span>
+                </div>
               </div>
             </div>
-            <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="inputCorreo" class="col-form-label">Correo:</label>
-              </div>
-              <div class="col-auto">
-                <input type="email" placeholder="Correo" id="inputCorreo" class="form-control">
-              </div>
-              <div class="col-auto">
-                <span id="inputCorreo-validation" class="form-text usuario-validation">
-                  Debe ingresar un correo Valido.
-                </span>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
             </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="btn-login">Login</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin Modal de Ingreso -->
 
-  <!-- Inicio Modal GameOver -->
-  <div class="modal fade" id="modalGameOver" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Game Over</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h4>Lo siento, perdiste! D:</h4>
-          <p>Puedes volver a iniciar el juego.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="btn-continuar">Continuar</button>
-        </div>
       </div>
     </div>
   </div>
-  <!-- FIn Modal GameOver -->
+
+  <!-- Toast Puntaje guardado -->
+  <div class="toast-container position-fixed top-0 end-0 p-4">
+    <div id="liveToast" class="toast bg-success   " role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body text-white fs-6 fw-semibold">
+          ¡Se guardó correctamente el puntaje!
+        </div>
+        <button type="button" class="btn-close me-2 m-auto text-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+
 
   <script type="text/javascript" src="./js/popper.min.js"></script>
   <script src="./js/modelo/modelo.js"></script>

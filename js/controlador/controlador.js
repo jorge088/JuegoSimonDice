@@ -3,6 +3,8 @@ class ControladorJuego {
         this.juego = new Juego();
         this.vistaJuego = new VistaJuego();
         this.cuadroSeleccionado = null;
+        this.modalFinJuego = new bootstrap.Modal('#modalGameOver');
+        this.resumenJuego = {};
     }
 
     //Carga datos del juego en pantalla y agregar events al tablero
@@ -10,6 +12,7 @@ class ControladorJuego {
         this.vistaJuego.iniciar();
         this.agregarEventoBtnJugar();
         this.agregarEventosClick();
+        this.agregarEventosGuardarPuntaje();
     }
 
     agregarEventoBtnJugar() {
@@ -57,8 +60,11 @@ class ControladorJuego {
 
             this.vistaJuego.clickPermitido = false;
             this.vistaJuego.actualizarStatusInfo('FIN DEL JUEGO');
+            this.resumenJuego = this.obtenerDatosJuego(); // Registra datos de la partida
+            this.modalFinJuego.show();
             this.vistaJuego.mostrarBtnJugar('Reiniciar');
             this.juego.reiniciarJuego();
+
 
 
         } else {
@@ -73,6 +79,60 @@ class ControladorJuego {
                 }, 1500);
             }
         }
+    }
+
+    //Obtener nivel alcanzado y fecha actual
+    obtenerDatosJuego() {
+        const nivel = this.juego.nivel;
+        const date = new Date();
+        const fecha = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+        return { nivel, fecha };
+    }
+
+    //Registrar puntaje de juego
+    agregarEventosGuardarPuntaje() {
+        const modalRegistroPuntaje = new bootstrap.Modal(document.querySelector('#modalRegistroPuntaje'));
+
+        //Evento submit de form en modalRegistro
+        const formRegistro = document.querySelector('#form');
+        formRegistro.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const toast = new bootstrap.Toast(document.getElementById('liveToast'))
+
+
+            let validado = true;
+
+            if (!document.querySelector('#form').checkValidity()) {
+                validado = false;
+                event.stopPropagation()
+            }
+            formRegistro.classList.add('was-validated')
+
+            if (validado) {
+                const user = document.querySelector('#inputUsuario');
+                this.resumenJuego = {
+                    ...this.resumenJuego,
+                    user: user.value
+                };
+                //Desactiva btnGuardar para evitar multiples registros
+                const btnGuardar = document.querySelector('#btnGuardar');
+                btnGuardar.disabled = true;
+                setTimeout(() => {
+                    console.log(this.resumenJuego);
+                    modalRegistroPuntaje.hide();
+                toast.show();
+
+                    //Se resetea form luego de ocultarlo
+                    setTimeout(() => {
+                        formRegistro.classList.remove('was-validated');
+                        formRegistro.reset();
+                        btnGuardar.disabled = false;
+                    }, 500);
+                }, 1000);
+            }
+
+        });
     }
 
 }
