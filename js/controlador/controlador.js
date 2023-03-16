@@ -1,10 +1,12 @@
+
 class ControladorJuego {
-    constructor() {
+    constructor(firestore) {
         this.juego = new Juego();
         this.vistaJuego = new VistaJuego();
         this.cuadroSeleccionado = null;
         this.modalFinJuego = new bootstrap.Modal('#modalGameOver');
         this.resumenJuego = {};
+        this.firestore = firestore;
     }
 
     //Carga datos del juego en pantalla y agregar events al tablero
@@ -13,6 +15,7 @@ class ControladorJuego {
         this.agregarEventoBtnJugar();
         this.agregarEventosClick();
         this.agregarEventosGuardarPuntaje();
+        console.log(this.firestore);
     }
 
     agregarEventoBtnJugar() {
@@ -118,10 +121,12 @@ class ControladorJuego {
                 //Desactiva btnGuardar para evitar multiples registros
                 const btnGuardar = document.querySelector('#btnGuardar');
                 btnGuardar.disabled = true;
+
                 setTimeout(() => {
-                    console.log(this.resumenJuego);
+                    // console.log(this.resumenJuego);
                     modalRegistroPuntaje.hide();
-                toast.show();
+                    this.guardarPuntajeFirestore(this.firestore, this.resumenJuego); //Envia datos a bd
+                    toast.show();
 
                     //Se resetea form luego de ocultarlo
                     setTimeout(() => {
@@ -132,6 +137,17 @@ class ControladorJuego {
                 }, 1000);
             }
 
+        });
+    }
+
+    //Registra datos en firebase
+    async guardarPuntajeFirestore(firestore, datosJuego) {
+        let { db, collection, addDoc } = firestore;
+        let { nivel, fecha, user } = datosJuego;
+        const response = await addDoc(collection(db, "puntajes"), {
+            nivel,
+            fecha,
+            usuario: user
         });
     }
 
