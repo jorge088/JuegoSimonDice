@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Puntajes</title>
+</head>
+
+<body class="bodyPuntaje">
+  <header class="container d-flex justify-content-center ">
+    <a class="btn btn-primary btnVolver" href="./../index.html">Volver al juego</a>
+  </header>
+  <div class="container">
+    <div class="puntajes">
+      <div class="puntajes__header">
+        <p>N°</p>
+        <p>Usuario</p>
+        <p>Nivel</p>
+        <p>Fecha</p>
+      </div>
+      <div class="puntajes__container" id="puntajesContainer">
+        <div class="d-flex flex-column justify-content-center align-items-center gap-3 text-white" id="puntajesSpinner">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <strong>Cargando puntajes...</strong>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <script src="./../js/puntajes.js" type="module"></script>
+</body>
+
+</html>

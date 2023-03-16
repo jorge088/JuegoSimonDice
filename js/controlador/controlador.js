@@ -15,7 +15,6 @@ class ControladorJuego {
         this.agregarEventoBtnJugar();
         this.agregarEventosClick();
         this.agregarEventosGuardarPuntaje();
-        console.log(this.firestore);
     }
 
     agregarEventoBtnJugar() {
