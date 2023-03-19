@@ -6,12 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego Simon dice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-  
+
   <div class="container">
     <div class="informacion row ">
       <div
@@ -43,11 +47,11 @@
 
 
   <!-- Modal GameOver -->
-  <div class="modal fade" id="modalGameOver" tabindex="-1">
+  <div class="modal fade" data-bs-backdrop="static" id="modalGameOver" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Fin del juego</h5>
+          <h5 class="modal-title fw-bold">Fin del juego</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -64,7 +68,7 @@
   </div>
 
   <!-- Modal de Ingreso -->
-  <div class="modal fade" id="modalRegistroPuntaje" tabindex="-1">
+  <div class="modal fade" data-bs-backdrop="static" id="modalRegistroPuntaje" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
