@@ -75,31 +75,31 @@ body {
   position: relative;
 }
 .tablero__cuadro.azul {
-  background: #1397c4;
+  background: #0000dd;
 }
 .tablero__cuadro.azul.resaltado {
-  background-color: #59cdf3;
+  background: #3838fa;
   opacity: 1;
 }
 .tablero__cuadro.verde {
-  background: #05743e;
+  background: #00a300;
 }
 .tablero__cuadro.verde.resaltado {
-  background-color: #0aaa5d;
+  background: #13d613;
   opacity: 1;
 }
 .tablero__cuadro.rojo {
-  background: #c20e17;
+  background: #eb0000;
 }
 .tablero__cuadro.rojo.resaltado {
-  background-color: #f32530;
+  background: #ff4141;
   opacity: 1;
 }
-.tablero__cuadro.violeta {
-  background: #724292;
+.tablero__cuadro.amarillo {
+  background: #c5c500;
 }
-.tablero__cuadro.violeta.resaltado {
-  background-color: #a65dd6;
+.tablero__cuadro.amarillo.resaltado {
+  background: #ffff44;
   opacity: 1;
 }
 

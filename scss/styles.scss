@@ -81,39 +81,54 @@ body {
     &__cuadro {
 
         &.azul {
-            background: #1397c4;
+            // background: #1397c4;
+            background: #0000dd;
 
             &.resaltado {
-                background-color: #59cdf3;
+                // background-color: #59cdf3;
+                background: #3838fa;
+
                 opacity: 1;
             }
         }
 
         &.verde {
-            background: #05743e;
+            // background: #05743e;
+            background: #00a300;
+
 
             &.resaltado {
-                background-color: #0aaa5d;
+                // background-color: #0aaa5d;
+            background: #13d613;
+
                 opacity: 1;
 
             }
         }
 
         &.rojo {
-            background: #c20e17;
+            // background: #c20e17;
+            background: #eb0000;
+
 
             &.resaltado {
-                background-color: #f32530;
+                // background-color: #f32530;
+            background: #ff4141;
+
                 opacity: 1;
 
             }
         }
 
-        &.violeta {
-            background: #724292;
+        &.amarillo {
+            // background: #724292;
+            background: #c5c500;
+
 
             &.resaltado {
-                background-color: #a65dd6;
+                // background-color: #a65dd6;
+            background: #ffff44;
+
                 opacity: 1;
 
             }
