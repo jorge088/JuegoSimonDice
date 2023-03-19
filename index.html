@@ -69,12 +69,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="h6">Te equivocaste en la secuencia de colores :c</p>
+          <p class="h6">Te equivocaste en la secuencia :c</p>
           <p class="h6">Puedes registrar tu puntaje ó reiniciar el juego.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" data-bs-target="#modalRegistroPuntaje" data-bs-toggle="modal"
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-target="#modalRegistroPuntaje" data-bs-toggle="modal"
             id="btnIngresarDatos">Ingresar datos</button>
         </div>
       </div>
@@ -86,15 +86,15 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Registrar puntaje</h5>
+          <h5 class="modal-title fw-bold">Registrar puntaje</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form role="form" id="form" novalidate>
             <div class="row g-3 mb-3">
-              <label for="inputUsuario" class="col-sm-2 col-form-label">Nickname:</label>
+              <label for="inputUsuario" class="col-sm-2 col-form-label">Usuario:</label>
               <div class="col-sm-10">
-                <input type="text" placeholder="Nickname" id="inputUsuario" class="form-control"
+                <input type="text" placeholder="Nombre de usuario" id="inputUsuario" class="form-control"
                   aria-describedby="validationUser" required>
                 <div id="validationUser" class="invalid-feedback">
                   Debe ingresar un nombre de usuario.
