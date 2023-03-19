@@ -9,11 +9,11 @@ body {
   background-size: cover;
   font-size: 1rem;
   min-height: 80vh;
-  padding: 1em 0;
+  padding: 0.8em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.8em;
+  gap: 1.6em;
   font-family: "Roboto Flex", sans-serif;
 }
 
@@ -52,15 +52,25 @@ body {
   display: none;
 }
 
-.informacion {
+.panelJuego {
   font-size: 1rem;
   color: #fff;
 }
-.informacion__status__label {
+.panelJuego__status {
   display: flex;
-  font-size: 1.45em;
+  font-size: 1.5em;
   gap: 10px;
   font-weight: 600;
+}
+.panelJuego__status p {
+  margin: 0;
+}
+.panelJuego__configuraciones .btnSonido {
+  width: 45px;
+  height: 38px;
+  font-size: 1.1em;
+  color: white;
+  outline: none;
 }
 
 .tablero {

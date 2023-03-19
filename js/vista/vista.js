@@ -1,6 +1,13 @@
 class VistaJuego {
     constructor() {
         this.clickPermitido = false;
+        this.sonidoOn = true;
+        this.notas = {
+            notaDo: new Audio('./../Assetts/sonidos/do.wav'),
+            notaRe: new Audio('./../Assetts/sonidos/re.wav'),
+            notaMi: new Audio('./../Assetts/sonidos/mi.wav'),
+            notaSi: new Audio('./../Assetts/sonidos/si.wav')
+        }
     }
 
     iniciar() {
@@ -10,7 +17,7 @@ class VistaJuego {
     }
 
     //Genera btn para controlar el juego en el DOM
-    generarBtnJugar(){
+    generarBtnJugar() {
         const tablero = document.querySelector('#tablero');
         tablero.innerHTML += `
             <button id="btn-jugar" class="btnJugar">Jugar</button>
@@ -18,13 +25,13 @@ class VistaJuego {
     }
 
     //Oculta btnJugar durante ejecución
-    ocultarBtnJugar(){
+    ocultarBtnJugar() {
         const btnJugar = document.querySelector('#btn-jugar');
         btnJugar.classList.add('oculto');
     }
 
     //Mostrar btnJugar cuando finaliza el juego
-    mostrarBtnJugar(texto){
+    mostrarBtnJugar(texto) {
         const btnJugar = document.querySelector('#btn-jugar');
         btnJugar.classList.remove('oculto');
         btnJugar.textContent = texto
@@ -34,7 +41,7 @@ class VistaJuego {
         document.querySelector('#nivel').textContent = `${nivel}`;
     }
 
-    actualizarStatusInfo(status){
+    actualizarStatusInfo(status) {
         document.querySelector('#status').textContent = `${status}`
     }
 
@@ -52,6 +59,7 @@ class VistaJuego {
 
                 } else {
                     iluminado = true;
+                    this.sonidoOn && this.reproducirNota(secuencia[indice])
                     document.getElementById(`cuadro${secuencia[indice]}`).classList.add("resaltado");
                 }
             } else {
@@ -66,9 +74,33 @@ class VistaJuego {
     //Ilumina el cuadro seleccionado
     mostrarEleccion(cuadro) {
         document.getElementById(`cuadro${cuadro}`).classList.add("resaltado");
+        this.sonidoOn && this.reproducirNota(cuadro)
         setTimeout(() => {
             document.getElementById(`cuadro${cuadro}`).classList.remove("resaltado");
         }, 300);
+    }
+
+    reproducirNota(cuadro) {
+        let audio;
+        switch (cuadro) {
+            case 0: audio = this.notas.notaDo;
+                break;
+            case 1: audio = this.notas.notaRe;
+                break;
+            case 2: audio = this.notas.notaMi;
+                break;
+            case 3: audio = this.notas.notaSi;
+                break;
+            default:
+                console.log('Error');
+                break;
+
+        }
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.currentTime = 0
+        }
     }
 
 }

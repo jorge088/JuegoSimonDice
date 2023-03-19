@@ -13,6 +13,7 @@ class ControladorJuego {
     iniciar() {
         this.vistaJuego.iniciar();
         this.agregarEventoBtnJugar();
+        this.agregarEventoBtnSonido()
         this.agregarEventosClick();
         this.agregarEventosGuardarPuntaje();
     }
@@ -23,6 +24,25 @@ class ControladorJuego {
             this.jugarNuevoNivel();
             this.vistaJuego.ocultarBtnJugar();
         })
+    }
+
+    agregarEventoBtnSonido(){
+        const btnSonido = document.querySelector('#btnSonido');
+        btnSonido.addEventListener('click', () =>{
+            this.vistaJuego.sonidoOn = !this.vistaJuego.sonidoOn;
+
+            if(this.vistaJuego.sonidoOn){
+                btnSonido.classList.toggle('btn-primary');
+                btnSonido.classList.toggle('btn-danger')
+                btnSonido.innerHTML=`<i class="fa-solid fa-volume-high"></i>`
+            }else{
+                btnSonido.classList.toggle('btn-primary');
+                btnSonido.classList.toggle('btn-danger')
+                btnSonido.innerHTML=`<i class="fa-solid fa-volume-xmark"></i>`
+            }
+
+        })
+
     }
 
     //Obtiene tablero seleccionado y lo verifica con la secuencia mostrada.

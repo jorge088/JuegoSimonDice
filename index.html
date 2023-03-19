@@ -6,28 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego Simon dice</title>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/9eb45967b7.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- CSS Styles -->
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
 
   <div class="container">
-    <div class="informacion row ">
-      <div
-        class="informacion__status col-12 d-flex flex-column flex-md-row align-items-center justify-content-around justify-content-md-between">
-        <div class="informacion__status__label ">
-          <p> Status: </p>
-          <span id="status" class="informacion__status__label__status"></span>
+    <div class="panelJuego row ">
+      <div class=" d-flex flex-column  align-items-center align-items-md-start gap-2">
+        <div
+          class="panelJuego__informacion col-12 d-flex flex-column flex-md-row align-items-center justify-content-around justify-content-md-between">
+          <div class="panelJuego__status">
+            <p> Status: </p>
+            <span id="status" class="informacion__status__label__status"></span>
+          </div>
+          <div class="panelJuego__status">
+            <p>Nivel: </p>
+            <span id="nivel" class="informacion__status__label__nivel">---</span>
+          </div>
         </div>
-        <div class="informacion__status__label">
-          <p>Nivel: </p>
-          <span id="nivel" class="informacion__status__label__nivel">---</span>
+        <div class="panelJuego__configuraciones">
+          <button id="btnSonido" class="btnSonido btn btn-primary">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
         </div>
+
+
       </div>
     </div>
 
