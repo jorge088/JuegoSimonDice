@@ -15,6 +15,6 @@ Sitio para jugar el famoso juego Simo Dice. Durante el juego se ilumina, de form
 
 ### Demo
 
-[imagen sitio Simon Dice](./Assetts/images/simonDice.jpeg)
+![imagen sitio Simon Dice](./Assetts/images/simonDice.jpeg)
 
-[imagen sitio Simon Dice registrar puntaje](./Assetts/images/simonDice2.jpeg)
+![imagen sitio Simon Dice registrar puntaje](./Assetts/images/simonDice2.jpeg)
